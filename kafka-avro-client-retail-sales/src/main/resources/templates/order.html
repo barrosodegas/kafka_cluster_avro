@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Retail Sales - New Order</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+		
+	<body>
+		<div class="container" >
+			<div class="jumbotron" align="center" style="margin-top: 50px;">
+				<h2>Retail Sales Another Site - New Order</h2>
+				<div align="center">
+					<a href="/" class="btn btn-lg btn-primary">Home</a>
+					<a href="/viewOrders" class="btn btn-lg btn-primary">View Orders</a>
+				</div>
+			</div>
+			
+			<form  th:object="${avroOrder}" th:action="${'/addOrder'}" method="post">
+				<input type="hidden" class="form-control" id="avroOrder.processingDate" 
+					name="avroOrder.processingDate" th:field="${avroOrder.processingDate}" />
+
+				<div class="form-group">
+					<label for="avroOrder.orderCode">Order Code</label> 
+					
+					<input type="hidden" class="form-control" id="avroOrder.orderCode" 
+						name="avroOrder.orderCode" th:field="${avroOrder.orderCode}" />
+					<input type="text" class="form-control" id="avroOrder.orderCode" 
+						name="avroOrder.orderCode" th:field="${avroOrder.orderCode}" disabled="disabled" />
+				</div>
+				<div class="form-group">
+					<label for="avroOrder.customerCode">Customer</label>
+
+					<input type="hidden" class="form-control" id="avroOrder.customerCode" 
+						name="avroOrder.customerCode" th:field="${avroOrder.customerCode}" />
+					<input type="text" class="form-control" id="avroOrder.customerCode" 
+						name="avroOrder.customerCode" th:field="${avroOrder.customerCode}" disabled="disabled" />
+				</div>
+				<button type="submit" class="btn btn-success">Add</button>
+			</form>
+		</div>
+	    
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	</body>
+	
+</html>

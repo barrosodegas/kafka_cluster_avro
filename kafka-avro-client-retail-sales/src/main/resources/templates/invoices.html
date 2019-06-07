@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="refresh" content="5" />
+		<title>Retail Sales - Invoice</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+	
+		<div class="container">
+		
+			<div class="jumbotron" align="center" style="margin-top: 50px;">
+				<h1>Retail Sales - Invoice list</h1>
+			</div>
+	
+			<div id="payments">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Invoice Code</th>
+							<th>Status</th>
+							<th>Payment Code</th>
+							<th>Approve</th>
+						</tr>
+					</thead>
+					<tr th:each="invoice : ${invoices}">
+						<td><span th:text="${invoice.code}"></span></td>
+						<td><span th:text="${invoice.status}"></span></td>
+						<td><span th:text="${invoice.payment.code}"></span></td>
+						<td><a th:href="${'viewInvoices/approve?invoiceId=' + invoice.invoiceId}" th:if="${invoice.status == 'IN_BILLING'}">This</a></td>
+					</tr>
+	
+				</table>
+			</div>
+			
+			<hr/>
+	
+			<div align="center">
+				<a href="/" class="btn btn-lg btn-primary">Home</a>
+			</div>
+	
+		</div>
+	
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	</body>
+	
+</html>

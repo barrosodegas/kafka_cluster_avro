@@ -1,0 +1,49 @@
+#!/bin/bash
+#/etc/init.d/avroschema
+
+user_name=node4
+DAEMON_PATH=/home/$user_name/cluster/confluent-5.2.1/bin
+DAEMON_NAME=avroschema
+
+# Check that networking is up.
+#[ ${NETWORKING} = "no" ] && exit 0
+
+PATH=$PATH:$DAEMON_PATH
+
+# See how we were called.
+case "$1" in
+  start)
+        # Start daemon.
+        pid=`ps ax | grep -i 'avroschema.avroschema' | grep -v grep | awk '{print $1}'`
+        if [ -n "$pid" ]
+          then
+            echo "Schema Registry is already running"
+        else
+          echo "Starting $DAEMON_NAME"
+          $DAEMON_PATH/schema-registry-start.sh -daemon /home/$user_name/cluster/confluent-5.2.1/etc/schema-registry/schema-registry.properties
+        fi
+        ;;
+  stop)
+        echo "Shutting down $DAEMON_NAME"
+        $DAEMON_PATH/schema-registry-stop.sh
+        ;;
+  restart)
+        $0 stop
+        sleep 2
+        $0 start
+        ;;
+  status)
+        pid=`ps ax | grep -i 'avroschema.avroschema' | grep -v grep | awk '{print $1}'`
+        if [ -n "$pid" ]
+          then
+          echo "Schema Registry is Running as PID: $pid"
+        else
+          echo "Schema Registry is not Running"
+        fi
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+esac
+
+exit 0

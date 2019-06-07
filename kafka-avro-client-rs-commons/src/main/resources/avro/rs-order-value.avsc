@@ -1,0 +1,57 @@
+[
+	{
+		"type": "record",
+		"namespace": "br.com.retailsales.commons.avro",
+		"name": "AvroProduct",
+		"fields": [
+			{
+				"name": "productCode", 
+				"type": "string", 
+				"doc": "Product code."
+			},
+			{
+				"name": "productPrice", 
+				"type": "double", 
+				"doc": "Product price."
+			},
+			{
+				"name": "productAmount", 
+				"type": "int", 
+				"default": 1, 
+				"doc": "Product amount."
+			}
+		]
+	},
+	{
+		"type": "record",
+		"namespace": "br.com.retailsales.commons.avro",
+		"name": "AvroOrder",
+		"fields": [
+			{
+				"name": "orderCode", 
+				"type": "string", 
+				"doc": "Order code."
+			},
+			{
+				"name": "customerCode", 
+				"type": "string", 
+				"doc": "Customer code ID."
+			},
+			{
+				"name": "productList", 
+				"type": {
+					"type": "array", 
+					"items": "br.com.retailsales.commons.avro.AvroProduct"
+				}, 
+				"doc": "Product list."
+			},
+			{
+				"name": "processingDate",
+				"type": { 
+					"type": "long", 
+					"logicalType": "timestamp-millis" 
+				}
+			}
+		]
+	}
+]

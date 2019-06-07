@@ -1,0 +1,29 @@
+{
+	"type": "record",
+	"namespace": "br.com.retailsales.commons.avro",
+	"name": "AvroDeliveryConfirmation",
+	"fields": [
+		{
+			"name": "deliveryConfirmationCode", 
+			"type": "string", 
+			"doc": "Delivery confirmation code."
+		},
+		{
+			"name": "orderCode", 
+			"type": "string", 
+			"doc": "Order code."
+		},
+		{
+			"name": "invoiceCode", 
+			"type": "string", 
+			"doc": "Invoice code."
+		},
+		{
+			"name": "processingDate",
+			"type": { 
+				"type": "long", 
+				"logicalType": "timestamp-millis" 
+			}
+		}
+	]
+}

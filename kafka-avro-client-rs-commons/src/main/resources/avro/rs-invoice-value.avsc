@@ -1,0 +1,24 @@
+{
+	"type": "record",
+	"namespace": "br.com.retailsales.commons.avro",
+	"name": "AvroInvoice",
+	"fields": [
+		{
+			"name": "invoiceCode", 
+			"type": "string", 
+			"doc": "Invoice code."
+		},
+		{
+			"name": "paymentCode", 
+			"type": "string", 
+			"doc": "Payment code."
+		},
+		{
+			"name": "processingDate",
+			"type": { 
+				"type": "long", 
+				"logicalType": "timestamp-millis" 
+			}
+		}
+	]
+}

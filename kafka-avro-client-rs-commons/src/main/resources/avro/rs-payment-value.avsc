@@ -1,0 +1,34 @@
+{
+	"type": "record",
+	"namespace": "br.com.retailsales.commons.avro",
+	"name": "AvroPayment",
+	"fields": [
+		{
+			"name": "paymentCode", 
+			"type": "string", 
+			"doc": "Payment code."
+		},
+		{
+			"name": "orderCode", 
+			"type": "string", "doc": 
+			"Order code."
+		},
+		{
+			"name": "totalAmount", 
+			"type": "int", 
+			"doc": "Total order amount."
+		},
+		{
+			"name": "totalValue", 
+			"type": "double", 
+			"doc": "Total order value."
+		},
+		{
+			"name": "processingDate",
+			"type": { 
+				"type": "long", 
+				"logicalType": "timestamp-millis" 
+			}
+		}
+	]
+}

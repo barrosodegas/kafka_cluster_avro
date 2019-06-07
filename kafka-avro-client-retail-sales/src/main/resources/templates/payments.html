@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="refresh" content="5" />
+		<title>Retail Sales - Payment</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+	
+		<div class="container">
+		
+			<div class="jumbotron" align="center" style="margin-top: 50px;">
+				<h1>Retail Sales - Payment list</h1>
+			</div>
+	
+			<div id="payments">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Payment Code</th>
+							<th>Amount</th>
+							<th>Value</th>
+							<th>Status</th>
+							<th>Order Code</th>
+							<th>Approve</th>
+						</tr>
+					</thead>
+					<tr th:each="payment : ${payments}">
+						<td><span th:text="${payment.code}"></span></td>
+						<td><span th:text="${payment.totalAmount}"></span></td>
+						<td><span th:text="${payment.totalValue}"></span></td>
+						<td><span th:text="${payment.status}"></span></td>
+						<td><span th:text="${payment.order.code}"></span></td>
+						<td><a th:href="${'viewPayments/approve?paymentId=' + payment.paymentId}" th:if="${payment.status == 'IN_PAYMENT'}">This</a></td>
+					</tr>
+	
+				</table>
+			</div>
+			
+			<hr/>
+	
+			<div align="center">
+				<a href="/" class="btn btn-lg btn-primary">Home</a>
+			</div>
+	
+		</div>
+	
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	</body>
+	
+</html>
