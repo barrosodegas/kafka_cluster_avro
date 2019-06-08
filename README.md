@@ -34,12 +34,13 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 
 ## Ferramentas e SO utilizados neste exemplo
 1. SO: Ubuntu-18.04 Desktop LTS
-2. Rede: net-tools
-3. Downloads: curl
-4. Java: openjdk-8-jdk
-5. Kafka: Apache kafka_2.12-2.2.0
-6. Avro Schema Registry: confluent-5.2.1-2.12
-7. BD Postgresql-10
+2. Software de criação de máquinas virtuais
+3. Rede: net-tools
+4. Downloads: curl
+5. Java: openjdk-8-jdk
+6. Kafka: Apache kafka_2.12-2.2.0
+7. Avro Schema Registry: confluent-5.2.1-2.12
+8. BD Postgresql-10
 
 ## Preparando cada host do cluster para receber o Kafka
 ### Nota: Cada arquivo de setup listado abaixo deve ser executado em todos os hosts antes de passar para o próximo setup-x.sh
