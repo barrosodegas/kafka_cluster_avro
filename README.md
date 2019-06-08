@@ -5,15 +5,16 @@ Projeto Kafka com um cluster contendo três hosts kafka-2.2 e um host Avro Schem
 Demonstrar como preparar um cluster Kafka com configurações básicas para produção e consumo de dados em formato Avro Schema.
 
 ## Para quem este projeto é indicado?
-Este projeto foi criado tendo em mente desenvolvedores que tem saibam instalar SO Linux e configurará-lo em rede e que pelomenos noções básicas em sistemas de messageria, Apache Avro, Apache Avro Schemas, Java-7 e/ou Java-8.
+Este projeto foi criado tendo em mente desenvolvedores que tem saibam instalar SO Linux e configurará-lo em rede e, que pelomenos noções básicas em sistemas de messageria(Conceitos de tópicos e filas), Apache Avro, Apache Avro Schemas, Java-7 e/ou Java-8.
 
 ## Sou iniciante. O posso que fazer?
-Para os que estão começando agora, deixarei abaixo *sugestões* de estudos que devem ser realisados antes de utilizar este projeto para para que possam ter uma boa base.
+Para os que estão começando agora, deixarei abaixo *SUGESTÕES* de estudos que deveriam ser realisados antes de utilizar este projeto para que possam ter uma boa base e não ficarem bloqueados caso algum imprevisto aconteça durante o processo.
 
 ### Literaturas
-1. [Comece por: "Kafka: The Definitive Guide", disponibizado neste link](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
-2. [Depois leia: "Making Sense of Stream Processing"](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
-3. [Aprenda sobre o orquestrador/coordenador de aplicações distribuídas, Zookeeper](https://www.amazon.com/ZooKeeper-Distributed-Coordination-Flavio-Junqueira-ebook/dp/B00GRCODKS)
+1. [Comece por: "Java-8"](https://howtodoinjava.com/java8/)
+2. [Depois leia: "Kafka: The Definitive Guide", disponibizado neste link](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
+3. ["Making Sense of Stream Processing"](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
+4. [Aprenda sobre o orquestrador/coordenador de aplicações distribuídas, Zookeeper](https://www.amazon.com/ZooKeeper-Distributed-Coordination-Flavio-Junqueira-ebook/dp/B00GRCODKS)
 
 ### Cursos
 1. [Comece por: "Learn Apache Kafka for Beginners".](https://www.udemy.com/course/apache-kafka/)

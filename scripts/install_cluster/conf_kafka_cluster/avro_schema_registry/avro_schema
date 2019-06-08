@@ -20,12 +20,12 @@ case "$1" in
             echo "Schema Registry is already running"
         else
           echo "Starting $DAEMON_NAME"
-          $DAEMON_PATH/schema-registry-start.sh -daemon /home/$user_name/cluster/confluent-5.2.1/etc/schema-registry/schema-registry.properties
+          $DAEMON_PATH/schema-registry-start -daemon /home/$user_name/cluster/confluent-5.2.1/etc/schema-registry/schema-registry.properties
         fi
         ;;
   stop)
         echo "Shutting down $DAEMON_NAME"
-        $DAEMON_PATH/schema-registry-stop.sh
+        $DAEMON_PATH/schema-registry-stop
         ;;
   restart)
         $0 stop
