@@ -78,6 +78,8 @@ Neste caso em específico, se bem planejado e aplicado em um cenário real, os d
 alimentar algum data warehouse que poderia ajudar a diretoria da empresa a decidir que produtos vender ou comprar em determinadas épocas do ano e em cada região do país.
 **E isso é só uma das formas de se tirar proveito desta plataforma!**
 
+# **Embre postarei vídeos de como preparar o cluste e executar os códigos deste projeto!**
+
 # Sobre o Autor
 Estou a sete anos na área e sempre em busca de uma integração melhor e mais robusta!
 [André Barroso](http://www.linkedin.com/pub/andré-barroso/33/708/a87)
