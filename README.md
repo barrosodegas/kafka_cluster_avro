@@ -77,3 +77,7 @@ Mas, o que eu quero é demonstar aqui o poder que temos em mãos utilizando essa
 Neste caso em específico, se bem planejado e aplicado em um cenário real, os dados coletados dos sistemas poderiam ser processados em tempo real para 
 alimentar algum data warehouse que poderia ajudar a diretoria da empresa a decidir que produtos vender ou comprar em determinadas épocas do ano e em cada região do país.
 **E isso é só uma das formas de se tirar proveito desta plataforma!**
+
+# Sobre o Autor
+Estou a sete anos na área e sempre em busca de uma integração melhor e mais robusta!
+[André Barroso](http://www.linkedin.com/pub/andré-barroso/33/708/a87)
