@@ -18,3 +18,8 @@ kafka-avro-client-rs-invoice-consumer/.classpath
 kafka-avro-client-rs-invoice-consumer/.gitignore
 kafka-avro-client-rs-invoice-consumer/.project
 kafka-avro-client-rs-invoice-consumer/.settings/
+kafka-avro-client-retail-sales/target/
+kafka-avro-client-rs-commons/target/
+kafka-avro-client-rs-invoice-consumer/target/
+kafka-avro-client-rs-order-consumer/target/
+kafka-avro-client-rs-payment-consumer/target/
