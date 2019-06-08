@@ -8,7 +8,7 @@ Demonstrar como preparar um cluster Kafka com configurações básicas para prod
 Este projeto foi criado tendo em mente desenvolvedores que tem saibam instalar SO Linux e configurará-lo em rede e, que pelomenos noções básicas em sistemas de messageria(Conceitos de tópicos e filas), Apache Avro, Apache Avro Schemas, Java-7 e/ou Java-8.
 
 ## Sou iniciante. O posso que fazer?
-Para os que estão começando agora, deixarei abaixo *SUGESTÕES* de estudos que deveriam ser realisados antes de utilizar este projeto para que possam ter uma boa base e não ficarem bloqueados caso algum imprevisto aconteça durante o processo.
+Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos que deveriam ser realisados antes de utilizar este projeto para que possam ter uma boa base e não ficarem bloqueados caso algum imprevisto aconteça durante o processo.
 
 ### Literaturas
 1. [Comece por: "Java-8"](https://howtodoinjava.com/java8/)
@@ -44,11 +44,11 @@ Para os que estão começando agora, deixarei abaixo *SUGESTÕES* de estudos que
 ## Preparando cada host do cluster para receber o Kafka
 ### Nota: Cada arquivo de setup listado abaixo deve ser executado em todos os hosts antes de passar para o próximo setup-x.sh
 1. Criar quarto hosts Linux com a rede em mode bridge para que possam de comunicar
-2. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-1.sh" para instalar e baixar os arquivos necessários. *Apenas no hosts que for hospedar um kafka server!*
-3. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-2.sh" para instalar e configurar o orquestrador kookeeper. *Apenas no hosts que for hospedar um kafka server!*
-4. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-3.sh" para isntalar e configurar o kafka. *Apenas no hosts que for hospedar um kafka server!*
-5. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-4.sh" para instalar e configurar o Avro Schema Regisrtry. *Apenas no hosts que for hospedar o Avro Schema Registry!*
-6. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/zookeeper/topics.sh para criar os tópicos utilizados neste exemplo. *Basta rodar em um dos hosts kafka que todas os demais hosts vão ter acesso a estes tópicos!*
+2. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-1.sh" para instalar e baixar os arquivos necessários. **Apenas no hosts que for hospedar um kafka server!**
+3. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-2.sh" para instalar e configurar o orquestrador kookeeper. **Apenas no hosts que for hospedar um kafka server!**
+4. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-3.sh" para isntalar e configurar o kafka. **Apenas no hosts que for hospedar um kafka server!**
+5. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-4.sh" para instalar e configurar o Avro Schema Regisrtry. **Apenas no hosts que for hospedar o Avro Schema Registry!**
+6. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/zookeeper/topics.sh para criar os tópicos utilizados neste exemplo. **Basta rodar em um dos hosts kafka que todas os demais hosts vão ter acesso a estes tópicos!**
 
 ## Como interagir com o cluster utilizando os clientes Java
 1. Após instalar o banco de dados, editar o arquivo: "recources/application.properties" dos projetos: "kafka-avro-client-retail-sales, kafka-avro-client-rs-invoice-consumer, kafka-avro-client-rs-order-consumer e kafka-avro-client-rs-payment-consumer" adicionando suas configurações de acesso ao banco
@@ -61,7 +61,7 @@ Para os que estão começando agora, deixarei abaixo *SUGESTÕES* de estudos que
 
 ## O que é este sistema cliente?
 É um sistema que faz cadastro de pedidos, produz e consome dados em formato Avro dos tópicos cobrindo os processos de solicitação de compra, pagamento e faturamento.
-*Estes projetos não estão completos. Foram criados apenas para fins de testes em Java*
+**Estes projetos não estão completos. Foram criados apenas para fins de testes em Java**
 
 ## Como é o fluxo?
 1. Ao adicionar um pedido, este é enviado para o tópico de pedidos
@@ -72,8 +72,8 @@ Para os que estão começando agora, deixarei abaixo *SUGESTÕES* de estudos que
 
 
 ## Qual o intuito disso?
-A idéia aqui foi simular um sistema ipotético de vendas no varejo. Como o intuito é o de demonstar como produzir e consumir dados em formato Avro. *O sistema não está completo e tem alguns dados mocados.*
+A idéia aqui foi simular um sistema ipotético de vendas no varejo. Como o intuito é o de demonstar como produzir e consumir dados em formato Avro. **O sistema não está completo e tem alguns dados mocados.**
 Mas, o que eu quero é demonstar aqui o poder que temos em mãos utilizando essa poderosa ferramenta de messageria e stream de dados.
 Neste caso em específico, se bem planejado e aplicado em um cenário real, os dados coletados dos sistemas poderiam ser processados em tempo real para 
 alimentar algum data warehouse que poderia ajudar a diretoria da empresa a decidir que produtos vender ou comprar em determinadas épocas do ano e em cada região do país.
-*E isso é só uma das formas de se tirar proveito desta plataforma!*
+**E isso é só uma das formas de se tirar proveito desta plataforma!**
