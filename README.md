@@ -44,10 +44,10 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 ## Preparando cada host do cluster para receber o Kafka
 ### Nota: Cada arquivo de setup listado abaixo deve ser executado em todos os hosts antes de passar para o próximo setup-x.sh
 1. Criar quarto hosts Linux com a rede em mode bridge para que possam de comunicar
-2. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-1.sh" para instalar e baixar os arquivos necessários. **Apenas no hosts que for hospedar um kafka server!**
-3. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-2.sh" para instalar e configurar o orquestrador kookeeper. **Apenas no hosts que for hospedar um kafka server!**
-4. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-3.sh" para isntalar e configurar o kafka. **Apenas no hosts que for hospedar um kafka server!**
-5. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-4.sh" para instalar e configurar o Avro Schema Regisrtry. **Apenas no hosts que for hospedar o Avro Schema Registry!**
+2. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-1.sh" para instalar e baixar os arquivos necessários. **Apenas nos hosts que for hospedar um kafka server!**
+3. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-2.sh" para instalar e configurar o orquestrador kookeeper. **Apenas nos hosts que for hospedar um kafka server!**
+4. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-3.sh" para isntalar e configurar o kafka. **Apenas nos hosts que for hospedar um kafka server!**
+5. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-4.sh" para instalar e configurar o Avro Schema Regisrtry. **Apenas nos hosts que for hospedar o Avro Schema Registry!**
 6. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/zookeeper/topics.sh para criar os tópicos utilizados neste exemplo. **Basta rodar em um dos hosts kafka que todas os demais hosts vão ter acesso a estes tópicos!**
 
 ## Como interagir com o cluster utilizando os clientes Java
