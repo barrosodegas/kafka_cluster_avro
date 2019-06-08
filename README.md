@@ -38,7 +38,15 @@ Demonstar como preparar um cluster Kafka para produção e consumo de dados em f
 7. O consumer "Order" roda na porta: "10000". O consumer: "Payment" rodar na porta: "11000". O consumer "Invoice" roda na porta: "12000"
 
 ## O que é este sistema cliente?
-É um sistema de faz cadastro de pedidos, produz e consume dados dos topicos cobrindo os processos de solicitação de compra, pagamento e faturamento.
+É um sistema que faz cadastro de pedidos, produz e consume dados dos topicos cobrindo os processos de solicitação de compra, pagamento e faturamento.
+
+## Como é o fluxo?
+1. Ao adicionar um pedido, este é enviado para o tópico de pedidos
+2. O consumer de pedidos irá persistir esses dados na base permitindo que o usuário possa avaliar e aprovar o pagamento
+3. Uma vez aprovado o pagamento, o usuário pode avaliar o pagamento e aprovar para er faturado.
+4. O consumer de pagamentos irá persistir esses dados na base permitindo que o usuário possa avaliar e aprovar o faturamento
+5. Uma vez aprovado o faturamento, este é enviado para o tópico de separaçãod e estoque e poder ser destinado ao cliente.
+
 
 ## Qual o intuito disso?
 A idéia aqui foi simular um sistema ipotético de vendas no varejo. Como o intuito é o de demonstar como produzir e consumir dados. O sistema não está completo e tem alguns dados mocados.
