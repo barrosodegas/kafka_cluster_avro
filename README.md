@@ -12,13 +12,13 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 
 ### Literaturas
 1. [Comece por: "Java-8"](https://howtodoinjava.com/java8/)
-2. [Depois leia: "Kafka: The Definitive Guide", disponibizado neste link](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
+2. [Depois leia: "Kafka: The Definitive Guide", disponibilizado neste link](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
 3. ["Making Sense of Stream Processing"](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
 4. [Aprenda sobre o orquestrador/coordenador de aplicações distribuídas, Zookeeper](https://www.amazon.com/ZooKeeper-Distributed-Coordination-Flavio-Junqueira-ebook/dp/B00GRCODKS)
 
 ### Cursos
 1. [Comece por: "Learn Apache Kafka for Beginners".](https://www.udemy.com/course/apache-kafka/)
-2. [Para extrair e sincronizar dados em sistemas externos: "Kafka Connect"](https://www.udemy.com/kafka-connect/)
+2. [Para extrair e sincronizar dados de e para sistemas externos: "Kafka Connect"](https://www.udemy.com/kafka-connect/)
 2. [Kafka Streams for Data Processing](https://www.udemy.com/kafka-streams/)
 3. [Confluent Avro Schema Registry](https://www.udemy.com/confluent-schema-registry/)
 4. [Kafka Cluster Setup and Administration](https://www.udemy.com/kafka-cluster-setup/)
@@ -34,7 +34,7 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 
 ## Ferramentas e SO utilizados neste exemplo
 1. SO: Ubuntu-18.04 Desktop LTS
-2. Software de criação de máquinas virtuais
+2. Software de criação de máquinas virtuais (VirtualBox ou VMware)
 3. Rede: net-tools
 4. Downloads: curl
 5. Java: openjdk-8-jdk
@@ -42,9 +42,9 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 7. Avro Schema Registry: confluent-5.2.1-2.12
 8. BD Postgresql-10
 
-## Preparando cada host do cluster para receber o Kafka
-### Nota: Cada arquivo de setup listado abaixo deve ser executado em todos os hosts antes de passar para o próximo setup-x.sh
-1. Criar quatro hosts Linux com uma rede em modo bridge para que possam de comunicar
+## Preparando cada host do cluster
+### Nota: Cada arquivo de setup listado abaixo deve ser executado em todos os hosts individualmente antes de passar para o próximo setup-x.sh
+1. Criar quatro hosts Linux com uma rede em modo bridge para que possam se comunicar
 2. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-1.sh" para instalar e baixar os arquivos necessários. **Apenas nos hosts que forem hospedar um kafka server!**
 3. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-2.sh" para instalar e configurar o orquestrador Zookeeper. **Apenas nos hosts que forem hospedar um kafka server!**
 4. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-3.sh" para instalar e configurar o kafka. **Apenas nos hosts que forem hospedar um kafka server!**
@@ -52,18 +52,20 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 6. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/zookeeper/topics.sh para criar os tópicos utilizados neste exemplo. **Basta rodar em um dos hosts kafka que todos os demais hosts terão acesso a estes tópicos!**
 
 ## Como interagir com o cluster utilizando os clientes Java
-1. Após instalar o banco de dados, editar o arquivo: "recources/application.properties" dos projetos: "kafka-avro-client-retail-sales, kafka-avro-client-rs-invoice-consumer, kafka-avro-client-rs-order-consumer e kafka-avro-client-rs-payment-consumer" adicionando suas configurações de acesso ao banco
-2. Criar o banco de dados: "retail_sales_order"
-3. Compilar o projeto: "kafka-avro-client-rs-commons" com o comando: "mvn clean package install -U -T 2"
-4. Compilar os demais projetos java com o comando: "mvn clean package -U"
-5. Com o cluster ativo e todos os hosts já configurados, executar o arquivo ".jar" de cada projeto em um prompt de comando separado a partir de um host/Notebooke/PC que tenha acesso ao cluster
-6. Acessar o projeto WEB através da URL: "http:localhost:9000", se estiver rodando em ambiente local!
-7. Os consumidores não tem interface WEB. Então, basta acompanhar os logs no prompt
-8. O consumidor "Order" roda na porta: "10000", o consumidor: "Payment" roda na porta: "11000" e o consumidor "Invoice" roda na porta: "12000"
+1. Nos host onde for rodar os clientes java, você adicionar o IP dos hosts do cluster no arquivo de hosts. Exemplo: No Windows-10 o arquivo fica em "C:\Windows\System32\drivers\etc\hosts"
+2. Após instalar o banco de dados, editar o arquivo: "recources/application.properties" dos projetos: "kafka-avro-client-retail-sales, kafka-avro-client-rs-invoice-consumer, kafka-avro-client-rs-order-consumer e kafka-avro-client-rs-payment-consumer" adicionando suas configurações de acesso ao banco
+3. Criar o banco de dados: "retail_sales_order"
+4. Executar os scripts de banco em: "scripts/db_script/postgresql"
+5. Compilar o projeto: "kafka-avro-client-rs-commons" com o comando: "mvn clean package install -U -T 2"
+6. Compilar os demais projetos java com o comando: "mvn clean package -U"
+7. Com o cluster ativo e todos os hosts já configurados, executar o arquivo ".jar" de cada projeto em um prompt de comando separado a partir de um host/Notebook/PC que tenha acesso ao cluster
+8. Acessar o projeto WEB através da URL: "http:localhost:9000", se estiver rodando em ambiente local!
+9. Os consumidores não tem interface WEB. Então, basta acompanhar os logs no prompt
+10. O consumidor "Order" roda na porta: "10000", o consumidor: "Payment" roda na porta: "11000" e o consumidor "Invoice" roda na porta: "12000"
 
 ## O que é este sistema cliente?
 É um sistema que faz cadastro de pedidos, produz e consome dados em formato Avro em seus respectivos tópicos cobrindo os processos de solicitação de compra, pagamento e faturamento.
-**Estes projetos não estão completos. Foram criados apenas para fins de testes de fluxo em Java**
+**Estes projetos não são completos. Foram criados apenas para fins de testes de fluxo em Java**
 
 ## Como é o fluxo?
 1. Ao adicionar um pedido, este é enviado para o tópico de pedidos
