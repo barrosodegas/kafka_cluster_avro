@@ -5,7 +5,7 @@ Projeto Kafka com um cluster contendo três hosts kafka-2.2 e um host Avro Schem
 Demonstrar como preparar um cluster Kafka com as configurações básicas para produção e consumo de dados em formato Avro Schema.
 
 ## Para quem este projeto é indicado?
-Este projeto foi criado tendo em mente que os desenvolvedores estão familiarizados com o SO Linux, sabem configurará-lo em rede e, que ao menos tenha noções básicas em sistemas de messageria(Conceitos de tópicos e filas), Apache Avro Schemas, Java-7 e/ou Java-8.
+Este projeto foi criado tendo em mente que os desenvolvedores estão familiarizados com algum SO Linux, saibam configurará-lo em rede e, que ao menos tenham noções básicas sobre sistemas de messageria(Conceitos de tópicos e filas), Apache Avro Schemas, Java-7 e/ou Java-8.
 
 ## Sou iniciante. O posso que fazer?
 Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos que devem ser realizados antes de iniciar este projeto para que possam ter uma boa base e não ficarem bloqueados caso algum imprevisto aconteça durante o processo.
