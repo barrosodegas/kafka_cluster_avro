@@ -77,14 +77,14 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 
 
 ## Qual o propósito desses projetos java?
-A idéia aqui foi simular um sistema hipotético de vendas no varejo. Como o intuito é apenas demonstar como produzir e consumir dados em formato Avro. **O sistema não está completo e tem alguns dados mocados.**
-Mas, o que eu quero com isto é demonstar o poder que temos em mãos utilizando essa poderosa ferramenta de messageria e stream de dados.
+A idéia aqui foi simular um sistema hipotético de vendas no varejo. Como o intuito é apenas demonstar como produzir e consumir dados em formato Avro, **o sistema não está completo e tem alguns dados mocados.**
+Mas, o que eu quero com isto é demonstar o poder que temos em mãos utilizando essa poderosa ferramenta de messageria e streaming de dados.
 Neste caso específico, se bem planejado e aplicado em um cenário real, os dados coletados deste sistema ou do conjunto de sistemas que atendem a empresa, poderiam ser processados em tempo real e 
-serem inseridos um data warehouse que poderia gerar relatórios que podem ajudar a diretoria da empresa a decidir que produtos vender ou comprar em determinadas épocas do ano e/ou em cada região do país.
+poderiam ser inseridos em um data warehouse que poderia gerar relatórios e métricas que podem ajudar a diretoria da empresa a decidir que produtos vender ou comprar em determinadas épocas do ano e/ou em cada região do país.
 **E isso é só uma das formas de se tirar proveito desta plataforma!**
 
 # **Em breve postarei vídeos sobre como preparar o cluster e executar os códigos deste projeto!**
 
 # Sobre o Autor
 Estou a sete anos na área e sempre em busca de uma integração melhor e mais robusta!
-[André Barroso](http://www.linkedin.com/pub/andré-barroso/33/708/a87)
+[Linkedin: André Barroso](http://www.linkedin.com/pub/andré-barroso/33/708/a87)
