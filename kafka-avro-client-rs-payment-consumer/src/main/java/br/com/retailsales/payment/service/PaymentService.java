@@ -55,6 +55,8 @@ public class PaymentService {
 		});
 		
 		this.paymentRepository.save(payment);
+		
+		System.out.println("Consumed and persisted the payment: " + avroPayment.getPaymentCode());
 	}
 
 }

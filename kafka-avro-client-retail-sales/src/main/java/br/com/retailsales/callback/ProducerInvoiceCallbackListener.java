@@ -46,5 +46,7 @@ public class ProducerInvoiceCallbackListener extends ProducerCallbackListener<St
 		
 		this.entityBase.setStatus(RetailSalesStatus.PAID_OUT.name());
 		this.paymentRepository.save(this.entityBase);
+		
+		System.out.println("Billing shipped successfully!");
 	}
 }

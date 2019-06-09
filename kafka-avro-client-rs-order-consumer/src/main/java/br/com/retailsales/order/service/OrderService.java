@@ -77,6 +77,8 @@ public class OrderService {
 		order.setStatus(RetailSalesStatus.OPEN.name());
 		
 		this.orderRepository.save(order);
+		
+		System.out.println("Consumed and persisted the order: " + avroOrder.getOrderCode());
 	}
 
 }

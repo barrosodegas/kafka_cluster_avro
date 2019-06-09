@@ -68,6 +68,8 @@ public class OrderService {
 	 */
 	public void addOrder(AvroOrder avroOrder) {
 		
+		System.out.println("Sending order: " + avroOrder.getOrderCode() + " to the ordering topic.");
+		
 		this.sender.sendOrder(avroOrder.getOrderCode(), avroOrder);
 	}
 	
@@ -80,6 +82,9 @@ public class OrderService {
 		
 		if(paymentMap != null) {
 			paymentMap.forEach((opOrder, payment) -> {
+				
+				System.out.println("Order sent to payment topic");
+				
 				this.sender.sendPayment(payment.getPaymentCode(), payment, opOrder.get());
 			});
 		}

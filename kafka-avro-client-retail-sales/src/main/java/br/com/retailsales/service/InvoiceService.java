@@ -70,6 +70,9 @@ public class InvoiceService {
 		
 		if(stockSeparationMap != null) {
 			stockSeparationMap.forEach((invoice, stockSeparation) -> {
+				
+				System.out.println("Sending order: " + stockSeparation.getOrderCode() + " to the stock separation topic.");
+				
 				this.sender.sendStockSeparation(stockSeparation.getStockSeparationCode(), stockSeparation, invoice);
 			});
 		}

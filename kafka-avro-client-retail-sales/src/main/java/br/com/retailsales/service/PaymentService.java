@@ -70,6 +70,8 @@ public class PaymentService {
 		
 		if(invoiceMap != null) {
 			invoiceMap.forEach((opPayment, invoice) -> {
+				System.out.println("Sending invoice: " + invoice.getInvoiceCode() + " to the invoice topic.");
+				
 				this.sender.sendInvoice(invoice.getInvoiceCode(), invoice, opPayment.get());
 			});
 		}

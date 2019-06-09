@@ -46,6 +46,8 @@ public class ProducerStockSeparationCallbackListener extends ProducerCallbackLis
 		
 		this.entityBase.setStatus(RetailSalesStatus.BILLED.name());
 		this.invoiceRepository.save(this.entityBase);
+		
+		System.out.println("Order sent successfully.");
 	}
 	
 }

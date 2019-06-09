@@ -47,6 +47,8 @@ public class InvoiceService {
 		invoice.setStatus(RetailSalesStatus.IN_BILLING.name());
 		
 		this.invoiceRepository.save(invoice);
+		
+		System.out.println("Consumed and persisted the invoice: " + avroInvoice.getInvoiceCode());
 	}
 
 }

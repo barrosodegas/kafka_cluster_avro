@@ -35,5 +35,7 @@ public class ProducerPaymentCallbackListener extends ProducerCallbackListener<St
 		this.entityBase.setStatus(RetailSalesStatus.IN_PAYMENT.name());
 
 		this.repository.save(this.entityBase);
+		
+		System.out.println("Payment sent successfully!");
 	}
 }
