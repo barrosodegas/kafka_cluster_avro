@@ -24,7 +24,7 @@ Playlist dos vídeos: https://www.youtube.com/channel/UC7cgeR1oDjr48M0squpG5Lg/p
 	* Vamos copiar os arquivos necessários para fazer as instalações e configurações dos hosts
 	* Vamos baixar e instalar os softwares de manipulação de rede
 	* Vamos baixar e descompactar o Apache Kafka Server
-	* Vamos descobrir o IP da cadas host no cluster
+	* Vamos descobrir o IP de cada host no cluster, criar um alias para eles e deixar os hosts configurados
 	
 
 4 - Instalando e configurando o Zookeeper
