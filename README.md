@@ -76,7 +76,7 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 6. Uma vez aprovado o faturamento, este é enviado para o tópico de separação de estoque para que o pedido possa ser destinado ao cliente.
 
 
-## Qual o propósito desses projetos java?
+## Qual o propósito destes projetos java?
 A idéia aqui foi simular um sistema hipotético de vendas no varejo. Como o intuito é apenas demonstar como produzir e consumir dados em formato Avro, **o sistema não está completo e tem alguns dados mocados.**
 Mas, o que eu quero com isto é demonstar o poder que temos em mãos utilizando essa poderosa ferramenta de messageria e streaming de dados.
 Neste caso específico, se bem planejado e aplicado em um cenário real, os dados coletados deste sistema ou do conjunto de sistemas que atendem a empresa, poderiam ser processados em tempo real e 
