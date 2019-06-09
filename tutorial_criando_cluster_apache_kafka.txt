@@ -1,0 +1,77 @@
+
+Tutorial: Criando um cluster Apache Kafka
+
+Playlist dos vídeos: https://www.youtube.com/channel/UC7cgeR1oDjr48M0squpG5Lg/playlists
+
+1 - O que vamos cobrir neste vídeo tutorial?
+
+	* Vamos ver como as VMs deste cluster estão configuradas
+	* Vamos baixar e instalar as ferramentas necessárias para rodar o Apache Kafka nos hosts
+	* Vamos instalar e configurar o orquestrador/coordenador de aplicações distribuídas, Zookeeper
+	* Vamos instalar e configurar o Apache Kafka
+	* Vamos verificar se ambos estão funcionando corretamente
+	* Vamos criar os tópicos no cluster
+	* Vamos ver como os clientes Spring Boot foram construídos
+	* Vamos executar os clientes para ver o cluster funcionando
+	
+2 - Visão geral sobre os hosts que compõem o cluster
+
+	* Vou passar as configurações do notebook que utilizei para construir este cluster para o tutorial
+	* Veremos que VMs foram criadas para compor o cluster e como elas estão configuradas
+	
+3 - Baixando e instalando os softwares necessários
+
+	* Vamos copiar os arquivos necessários para fazer as instalações e configurações dos hosts
+	* Vamos baixar e instalar os softwares de manipulação de rede
+	* Vamos baixar e descompactar o Apache Kafka Server
+	* Vamos descobrir o IP da cadas host no cluster
+	
+
+4 - Instalando e configurando o Zookeeper
+
+	* Vou passar uma visão geral do que é o Zookeeper e como ele é utilizado pelo Kafka
+	* Vamos configurar o Zookeeper em cada host Kafka para rodar em mode cluster com múltiplos hosts
+	* Vamos verificar se os Zookeepers estão sincronizados e conseguindo se comunicar
+
+
+5 - Instalando e configurando o Kafka
+
+	* Vou passar uma visão geral do que é o Kafka
+	* Vamos configurar o Kafka server em cada host Kafka para rodar em mode cluster com múltiplos hosts
+	* Vamos verificar se os Kafkas estão sincronizados e conseguindo se comunicar
+
+
+6 - Criando os tópicos
+
+	* Vamos criar os tópicos utilizados neste projeto modelo
+	* Vamos verificar se os tópicos estão disponíveis para uso e se foram sincronizados com todos os nós do cluster
+	
+	
+7 - Instalando e configurando o Avro Schema Registry
+
+	* Vou passar uma visão geral sobre o que é o Apache Avro e o que é o Avro Schema Registry
+	* Vamos instalar e configurar o Schema Registry
+	
+	
+8 - Criando e configurando o bando de dados
+	
+	* Vamos criar e configurar o banco de dados que será utilizada pelos clientes Spring
+	
+	
+9 - Visão geral dos clientes Springo Boot
+
+	* Vou passar uma visão geral sobre os clientes que foram criados para interagir com este cluster
+
+
+10 - Executando os clientes Spring Boot
+
+	* Vamos executar os clientes para vermos que os dados estão sendo produzidos e consumidos em formato Avro com sucesso
+	
+11 - O que estudar para ter uma boa base em Apache kafuka
+
+	* Vou falar um pouco sobre que lisvros eu li e que cursos eu fiz
+	
+12 - Agradecimentos
+	
+	* Um breve agradecimento aos livros e cursos que me ajudaram a aprender sobre este sistema de mensageria e streaming de dados
+	* Um breve agradecimento aos que assistiram este tutorial

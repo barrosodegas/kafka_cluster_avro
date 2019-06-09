@@ -15,6 +15,7 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 2. [Depois leia: "Kafka: The Definitive Guide", disponibilizado neste link](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
 3. ["Making Sense of Stream Processing"](https://www.confluent.io/resources/?_ga=2.5496883.1489748109.1559990952-721488887.1559164543)
 4. [Aprenda sobre o orquestrador/coordenador de aplicações distribuídas, Zookeeper](https://www.amazon.com/ZooKeeper-Distributed-Coordination-Flavio-Junqueira-ebook/dp/B00GRCODKS)
+5. [Apache Avro Schema](https://avro.apache.org/docs/1.8.2/)
 
 ### Cursos
 1. [Comece por: "Learn Apache Kafka for Beginners".](https://www.udemy.com/course/apache-kafka/)

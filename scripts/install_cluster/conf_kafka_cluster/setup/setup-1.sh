@@ -11,7 +11,7 @@ sudo apt-get update && sudo apt-get install -y net-tools curl openjdk-8-jdk
 curl http://mirror.nbtelecom.com.br/apache/kafka/2.2.0/kafka_2.12-2.2.0.tgz --output /home/node1/Downloads/kafka_2.12-2.2.0.tgz
 
 # Descompactando o Kafka com o zookeeper e excluindo o arquivo compactado.
-tar -xvf /home/node1/Downloads/kafka_2.12-2.2.0.tgz -C /home/node1/cluster/ && /home/node1/Downloads/kafka_2.12-2.2.0.tgz
+tar -xvf /home/node1/Downloads/kafka_2.12-2.2.0.tgz -C /home/node1/cluster/ && rm /home/node1/Downloads/kafka_2.12-2.2.0.tgz
 
 # Renomeia a pasta do kafka.
 mv /home/node1/cluster/kafka_2.12-2.2.0 /home/node1/cluster/kafka
