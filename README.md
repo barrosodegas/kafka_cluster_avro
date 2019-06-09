@@ -48,7 +48,7 @@ Para os que estão começando agora, deixarei abaixo **SUGESTÕES** de estudos q
 2. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-1.sh" para instalar e baixar os arquivos necessários. **Apenas nos hosts que forem hospedar um kafka server!**
 3. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-2.sh" para instalar e configurar o orquestrador Zookeeper. **Apenas nos hosts que forem hospedar um kafka server!**
 4. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-3.sh" para instalar e configurar o kafka. **Apenas nos hosts que forem hospedar um kafka server!**
-5. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-4.sh" para instalar e configurar o Avro Schema Regisrtry. **Apenas nos hosts que forem hospedar o Avro Schema Registry!**
+5. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/setup/setup-4.sh" para instalar e configurar o Avro Schema Registry. **Apenas nos hosts que forem hospedar o Avro Schema Registry!**
 6. Executar os comandos do arquivo: "scripts/install_cluster/conf_kafka_cluster/zookeeper/topics.sh para criar os tópicos utilizados neste exemplo. **Basta rodar em um dos hosts kafka que todos os demais hosts terão acesso a estes tópicos!**
 
 ## Como interagir com o cluster utilizando os clientes Java
