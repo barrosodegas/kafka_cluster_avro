@@ -66,12 +66,26 @@ Playlist dos vídeos: https://www.youtube.com/channel/UC7cgeR1oDjr48M0squpG5Lg/p
 10 - Executando os clientes Spring Boot
 
 	* Vamos executar os clientes para vermos que os dados estão sendo produzidos e consumidos em formato Avro com sucesso
+
+
+11 - Consumindo dados dos tópicos através da console nos hosts	
 	
-11 - O que estudar para ter uma boa base em Apache kafuka
+	* Vamos consimur dados através da console de cada host
+	
+	
+12 	- Teste de performance e resiliência do cluster
+
+	* Vamos produzir dados em lote gerando dados para análise de performance
+	* Vamos simular a queda de um dos hosts do cluster para ver como o cluster se comporta
+	* Vamos simular a queda e perdade da dados de um dos hosts e ver como o cluster se comporta
+
+
+13 - O que estudar para ter uma boa base em Apache kafka
 
 	* Vou falar um pouco sobre que lisvros eu li e que cursos eu fiz
 	
-12 - Agradecimentos
+	
+14 - Agradecimentos
 	
 	* Um breve agradecimento aos livros e cursos que me ajudaram a aprender sobre este sistema de mensageria e streaming de dados
 	* Um breve agradecimento aos que assistiram este tutorial
